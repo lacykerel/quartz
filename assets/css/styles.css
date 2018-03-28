@@ -21,6 +21,33 @@ video {
   object-fit: fill;
 }
 
+video img {
+  object-fit: cover;
+  z-index: 1;
+}
+
+.video-icon-contain {
+  position: relative;
+  height: 100%;
+  display: none;
+}
+
+.video-icon {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  font-size: 120px;
+  left: 50%;
+  outline: none;
+  position: relative;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  -webkit-apperance: none;
+  -moz-appearance: none;
+}
+
 .ad-group {
   height: 430px;
   position: relative;
@@ -137,6 +164,9 @@ h3 {
   video {
     float: left;
     width: 940px;
+  }
+  .video-icon-contain {
+    display: block;
   }
   .info {
     float: right;

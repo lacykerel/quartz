@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Responsive Ad unit</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
@@ -18,8 +19,10 @@
       <div class="ad-group">
         <div class="ad active-ad">
           <div class="video-section">
-            <div class="video-img"></div>
-            <video width="100%" height="100%" src="./assets/videos/walking.mp4" loop autoplay></video>
+            <div class="video-icon-contain"><button class="video-icon" data-video="0"><i class="far fa-play-circle"></i></button></div>
+            <video class="video" width="100%" height="100%"  poster="./assets/img/adidas-img.jpg" controls>
+              <source loop autoplay src="./assets/videos/walking.mp4" type="video/mp4">
+            </video>
           </div>
           <div class="info">
             <div class="content">
@@ -31,9 +34,7 @@
                 <div class="pull-left">
                   <a href="/" class="btn">Learn more</a>
                 </div>
-                <div class="pull-right">
-
-                </div>
+           
               </div>
             </div>
 
@@ -41,8 +42,11 @@
         </div>
         <div class="ad">
           <div class="video-section">
-            <div class="video-img"></div>
-            <video width="100%" height="100%" src="./assets/videos/shoes.mp4" loop autoplay></video>
+              <div class="video-icon-contain"><button class="video-icon" data-video="1"><i class="far fa-play-circle"></i></button></div>
+
+            <video data-video="shoes" class="video" width="100%" height="100%" poster="./assets/img/tying-shoe-img.jpg" controls>
+              <source loop autoplay src="./assets/videos/shoes.mp4" type="video/mp4">
+            </video>
           </div>
           <div class="info">
             <div class="content">
@@ -54,20 +58,17 @@
                 <div class="pull-left">
                   <a href="/" class="btn">Learn more</a>
                 </div>
-                <div class="pull-right">
-                  <button class="controls previous">
-                    <</button>
-                      <button class="controls next">></button>
-                </div>
               </div>
             </div>
-
           </div>
         </div>
         <div class="ad">
           <div class="video-section">
-            <div class="video-img"></div>
-            <video width="100%" height="100%" src="./assets/videos/street_walking.mp4" loop autoplay></video>
+              <div class="video-icon-contain"><button class="video-icon" data-video="2"><i class="far fa-play-circle"></i></button></div>
+
+            <video class="video" width="100%" height="100%" poster="./assets/img/street-walking-img.jpg" controls>
+              <source loop autoplay src="./assets/videos/street_walking.mp4" type="video/mp4">
+            </video>
           </div>
           <div class="info">
             <div class="content">
@@ -87,6 +88,7 @@
       </div>
       <div class="pull-right">
         <button class="controls previous"><</button>
+        <span class="slideCount"></span>
         <button class="controls next">></button>
       </div>
     </div>
