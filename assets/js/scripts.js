@@ -10,6 +10,8 @@ document.querySelector('.slideCount').innerHTML = currentSlide + 1 +'/'+ slideCo
 $('.video-icon').on('click', function(){
   var videoId = $(this).data('video');
   $('video').get(videoId).play();
+  clearInterval(slideInterval);
+  $('.video-icon').css('display', 'none');
 });
 
 $('.video-section video').on('play', function() {
@@ -18,35 +20,29 @@ $('.video-section video').on('play', function() {
 });
 
 $('.video-section video').on('pause', function() {
-  $('.video-icon').css('display', 'block');
-});
-
-$('.video-section video').on('pause', function() {
   slideInterval = setInterval(nextSlide, 8000);
 });
 
 function goToSlide(n) {  
   slides[currentSlide].className = 'ad';
-  currentSlide = (currentSlide+1)%slides.length;
+  currentSlide = (currentSlide+1) % slides.length;
   slides[currentSlide].className = 'ad active-ad';
   document.querySelector('.slideCount').innerHTML = currentSlide + 1 +'/'+ slideCount;
-  $('.video').get(n).pause();
-
+  $('.video-icon').css('display', 'block');
+  $('.video').get(n -1).pause();
 }
 
 function nextSlide() {
-  goToSlide(currentSlide+1);
+  goToSlide(currentSlide + 1);
 }
 
 function previousSlide() {
-  goToSlide(currentSlide-1);
+  goToSlide(currentSlide - 1);
 }
 
 next.onclick = function() {
-  nextSlide();  
-
+  nextSlide();
 }
 previous.onclick = function() {
-  previousSlide();
-
+  previousSlide();  
 }

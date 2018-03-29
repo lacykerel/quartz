@@ -7,21 +7,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Responsive Ad unit</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl"
+    crossorigin="anonymous"></script>
   <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
   <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-
   <main>
     <div class="videoPlayer">
       <div class="ad-group">
+
         <div class="ad active-ad">
           <div class="video-section">
-            <div class="video-icon-contain"><button class="video-icon" data-video="0"><i class="far fa-play-circle"></i></button></div>
-            <video class="video" width="100%" height="100%"  poster="./assets/img/adidas-img.jpg" controls>
-              <source loop autoplay src="./assets/videos/walking.mp4" type="video/mp4">
+            <div class="video-icon-contain">
+              <button class="video-icon" data-video="0"><i class="far fa-play-circle"></i></button>
+            </div>
+            <video class="video" loop width="100%" height="100%" poster="./assets/img/adidas-img.jpg">
+              <source src="./assets/videos/walking.mp4" type="video/mp4">
             </video>
           </div>
           <div class="info">
@@ -29,23 +32,22 @@
               <h3>Adidas Superstar Shoes</h3>
               <p class="video-description">From basketball MVP to streetwear queen, the adidas Superstar shoe has been going strong since 1969. These
                 women's sneakers are a faithful reproduction of the shell-toe shoe with a smooth leather upper riding on
-                a rubber cupsole.</p>
+                a rubber cupsole.
+              </p>
               <div class="learnmore-scroll">
-                <div class="pull-left">
-                  <a href="/" class="btn">Learn more</a>
-                </div>
-           
+                  <a href="http://google.com" target="_blank" class="btn">Learn more</a>
               </div>
             </div>
-
           </div>
         </div>
+
         <div class="ad">
           <div class="video-section">
-              <div class="video-icon-contain"><button class="video-icon" data-video="1"><i class="far fa-play-circle"></i></button></div>
-
-            <video data-video="shoes" class="video" width="100%" height="100%" poster="./assets/img/tying-shoe-img.jpg" controls>
-              <source loop autoplay src="./assets/videos/shoes.mp4" type="video/mp4">
+            <div class="video-icon-contain">
+              <button class="video-icon" data-video="1"><i class="far fa-play-circle"></i></button>
+            </div>
+            <video data-video="shoes" loop class="video" width="100%" height="100%" poster="./assets/img/tying-shoe-img.jpg">
+              <source src="./assets/videos/shoes.mp4" type="video/mp4">
             </video>
           </div>
           <div class="info">
@@ -53,51 +55,46 @@
               <h3>Science Proves There's a Right Way to Tie Your Shoes. You've Probably Been Doing It Wrong</h3>
               <p class="video-description">How many years have you been tying your own shoes? Chances are, you've been doing it wrong all this time. That's
                 the result of extensive research conducted by a team at UC Berkeley led by Oliver O'Reilly, professor of
-                mechanical engineering.</p>
+                mechanical engineering.
+              </p>
               <div class="learnmore-scroll">
-                <div class="pull-left">
-                  <a href="/" class="btn">Learn more</a>
-                </div>
+                  <a href="http://google.com" target="_blank" class="btn">Learn more</a>
               </div>
             </div>
           </div>
         </div>
+
         <div class="ad">
           <div class="video-section">
-              <div class="video-icon-contain"><button class="video-icon" data-video="2"><i class="far fa-play-circle"></i></button></div>
-
-            <video class="video" width="100%" height="100%" poster="./assets/img/street-walking-img.jpg" controls>
-              <source loop autoplay src="./assets/videos/street_walking.mp4" type="video/mp4">
+            <div class="video-icon-contain">
+              <button class="video-icon" data-video="2"><i class="far fa-play-circle"></i></button>
+            </div>
+            <video class="video" loop width="100%" height="100%" poster="./assets/img/street-walking-img.jpg">
+              <source src="./assets/videos/street_walking.mp4" type="video/mp4">
             </video>
           </div>
           <div class="info">
             <div class="content">
               <h3>Commute time for NYC residents longest in the nation </h3>
               <p class="video-description">New York City residents face the longest commute times among workers in the nation's 30 largest cities—an average
-                of 6 hours, 18 minutes per week—and have little flexibility in their schedules, a new report has found.</p>
+                of 6 hours, 18 minutes per week—and have little flexibility in their schedules, a new report has found.
+              </p>
               <div class="learnmore-scroll">
-                <div class="pull-left">
-                  <a href="/" class="btn">Learn more</a>
-                </div>
-
+                  <a href="http://google.com" target="_blank" class="btn">Learn more</a>
               </div>
             </div>
-
           </div>
         </div>
-      </div>
-      <div class="pull-right">
-        <button class="controls previous"><</button>
-        <span class="slideCount"></span>
-        <button class="controls next">></button>
+
+        <div class="controls">
+            <button class="previous"><i class="fas fa-chevron-left"></i></button><span class="slideCount"></span><button class=" next"><i class="fas fa-chevron-right"></i></button>
+          </div>
       </div>
     </div>
   </main>
 
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-
   <script src="./assets/js/scripts.js"></script>
 </body>
-
 </html>

@@ -5,38 +5,39 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-
 main {
-  max-width: 1920px;
   margin: 0 auto;
+  max-width: 1920px;
 }
 
 video {
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
+  left: 0;
   object-fit: fill;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
 }
 
-video img {
-  object-fit: cover;
-  z-index: 1;
+h3 {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  margin-bottom: 12px;
 }
 
 .video-icon-contain {
-  position: relative;
-  height: 100%;
   display: none;
+  height: 100%;
+  position: relative;
 }
 
 .video-icon {
   background: transparent;
   border: none;
-  cursor: pointer;
   color: #fff;
+  cursor: pointer;
   font-size: 120px;
   left: 50%;
   outline: none;
@@ -50,24 +51,23 @@ video img {
 
 .ad-group {
   height: 430px;
-  position: relative;
-  padding: 0;
   margin: 0;
+  padding: 0;
+  position: relative;
 }
 
 .ad {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
   height: 100%;
+  left: 0;
   opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: opacity 1s;
+  width: 100%;
   z-index: 1;
-
   -webkit-transition: opacity 1s;
   -moz-transition: opacity 1s;
   -o-transition: opacity 1s;
-  transition: opacity 1s;
 }
 
 .active-ad {
@@ -77,8 +77,8 @@ video img {
 
 .videoPlayer {
   height: 320px;
-  max-width: 1600px;
   margin: auto;
+  max-width: 1600px;
   position: relative;
 }
 
@@ -91,45 +91,35 @@ video img {
   padding: 20px;
 }
 
-h3 {
-  font-weight: 700;
-  font-size: 24px;
-  margin-bottom: 12px;
-  line-height: 22px;
-}
-
 .video-description, .learnmore-scroll {
-  position: relative;
-  margin-bottom: 20px;
   display: block;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .video-description {
   color: #000;
   font-size: 16px;
   display: block;
-  margin-bottom: 20px;
   line-height: 24px;
+  margin-bottom: 20px;
 }
 
 .btn {
   background-color: #0f6db3;
   border: none;
   color: #fff;
+  cursor: pointer;
+  display: inline-block;
   font-weight: normal;
   font-size: 14px;
   padding: 12px 14px;
+  text-align: center;
   text-decoration: none;
+  width: 100px;
 }
-
 .btn:hover {
   background-color: #107ac8;
-}
-.pull-left {
-  float: left;
-}
-.pull-right {
-  float: right;
 }
 
 .video-section {
@@ -138,47 +128,101 @@ h3 {
   width: 100%;
 }
 
-.video-img {
-  height: 100%;
+.controls {
+  bottom: -26em;
+  position: absolute;
+  right: 1em;
+  z-index: 9;
+}
+
+.controls .previous, .controls .next {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 40px;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.controls span {
+  bottom: 10px;
   position: relative;
-  width: 100%;
 }
 
 @media screen and (min-width: 768px) {
-  .video-img {
-    display: none;
-  }
   video {
     display: block;
   }
+
   .videoPlayer {
     height: 520px;
   }
+
+  .controls {
+    bottom: -25em;
+  }
+
+  .video-description {
+    height: 100px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  main {
+    margin: 10em auto;
+  }
+
+  .video-section {
+    float: left;
+    width: 50%;
+  }
+
+  .video-icon-contain {
+    display: block;
+  }
+
+  .info {
+    float: right;
+    width: 50%;
+  }
+
+  .controls {
+    bottom: 1em;
+  }
+
 }
 
 @media screen and (min-width: 1600px) {
+ 
+  video {
+    float: left;
+    width: 980px;
+  }
+
   .ad-group {
     height: 520px;
   }
 
-  video {
-    float: left;
-    width: 940px;
-  }
-  .video-icon-contain {
-    display: block;
-  }
   .info {
     float: right;
-    width: 660px;
+    width: 620px;
   }
 
   .content {
+    height: 320px;
     padding: 100px 20px;
   }
 
   .video-section {
-    width: 940px;
+    width: 980px;
     float: left;
+  }
+
+  .controls {
+    bottom: 1em;
+    position: absolute;
+    right: 1em;
+    z-index: 9;
   }
 }
